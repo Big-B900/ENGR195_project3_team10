@@ -21,6 +21,9 @@ $pip install SimpleCV
 
 
 EACH TIME YOU RUN:
+navigate to ~/project 3:
+$cd project3
+
 activate virtualenv:
 $source env/bin/activate
 
