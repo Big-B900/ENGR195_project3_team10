@@ -8,6 +8,9 @@ code_dir = '/home/pi/project3/ENGR195_project3_team10/'
 # here, you can provide a default hostname
 # (from your .ssh/config)
 default_hosts = ["raspi"]
+#hosts.user = 'pi'
+#hosts.password = 'engr195'
+
 
 # to perform the task on your default hosts, you
 # have to pass them in each task decorator
