@@ -16,6 +16,15 @@ install packages
 $pip install tensorflow==1.15
 $pip install SimpleCV
 
+//updates
+$pip install fabric
+
+in .../env/lib/python3.6/site-packages/paramiko/client.py
+add in a line before line 628:
+
+	password = 'engr195'
+
+
 
 
 
@@ -32,6 +41,21 @@ $...
 
 deactivate virtualenv
 $deactivate
+
+SECTION FOR WORKING WITH FABRIC
+to run code with fabric on other device, go to the folder with fabfile.py
+make sure to be connected to the other device
+
+run
+$fab --prompt-for-login-password <function>
+
+where function is the name of the function to run on the other device
+
+example
+$fab --prompt-for-login-password update
+
+
+
 
 
 
