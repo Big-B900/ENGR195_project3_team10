@@ -42,6 +42,7 @@ def vision(c):
 	vision_dir = '/home/testuser/gitprojects/ENGR195_project3_team10/classifier/'
 	env_dir = "/home/testuser/"
 	result =  c.run("cd {} && source env/bin/activate && cd {} && python3 runvision.py".format(env_dir,vision_dir),hide=True)
+	return result
 	#print(result)
 
 
