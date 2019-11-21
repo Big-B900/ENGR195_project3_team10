@@ -50,3 +50,9 @@ def virtualenv(c):
 @task(hosts=default_hosts)
 def vision(c):
     c.run("cd {} && source env/bin/activate && cd {} && python3 runvision.py".format(env_dir,vision_dir))
+
+
+
+
+
+vision(1)    
