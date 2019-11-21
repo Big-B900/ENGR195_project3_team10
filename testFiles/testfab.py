@@ -57,5 +57,5 @@ def vision(c):
 
 with hide('output'):
 	c = Connection('kanga2')
-	result = c.run("cd {} && git pull".format(code_dir))
+	result = c.run("cd {} && git pull".format(code_dir),hide=True)
 	print(result.stdout.strip())
