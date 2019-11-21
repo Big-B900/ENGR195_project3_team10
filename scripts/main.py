@@ -14,13 +14,13 @@ direction = 0
 
 while True:
     if not(ss.digital_read(BUTTON_1)):
-        #print("yuh")
+        print("yuh")
         fn.picToTop(camera)
         #testfn()
         #make sure picture is recieved
         time.sleep(.5)
         #this runs the neural network on the laptop and returns a dictionary of the confidences
-        result = fn.vision(c).stdout.strip()
+        result = fn.vision(c)
         
         print(result)
        
