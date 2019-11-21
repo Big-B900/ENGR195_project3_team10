@@ -48,13 +48,17 @@ make sure to be connected to the other device
 
 run
 $fab --prompt-for-login-password <function>
-
 where function is the name of the function to run on the other device
 
 example
 $fab --prompt-for-login-password update
 
+//update for hardcoded passwords
 
+use:
+$fab function
+ex: 
+$fab update
 
 
 
