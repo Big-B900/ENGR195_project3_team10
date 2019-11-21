@@ -2,6 +2,7 @@ from adafruit_crickit import crickit
 import functions as fn
 from picamera import PiCamera
 from fabric import task, Connection
+import time
 #from kanga2:.pythonTest import testfn
 
 ss = crickit.seesaw
