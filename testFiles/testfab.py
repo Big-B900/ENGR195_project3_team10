@@ -1,4 +1,4 @@
-from fabric import task, Connection, hide
+from fabric import task, Connection
 
 # the directory of your project on your VPS
 #code_dir = #'/home/pi/project2/ENGR195_project3_team10/'
@@ -55,7 +55,7 @@ def vision(c):
 
 
 
-with hide('output'):
-	c = Connection('kanga2')
-	result = c.run("cd {} && git pull".format(code_dir),hide=True)
-	print(result.stdout.strip())
+
+c = Connection('kanga2')
+result = c.run("cd {} && git pull".format(code_dir),hide=True)
+print(result.stdout.strip())
