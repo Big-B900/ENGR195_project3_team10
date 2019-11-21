@@ -1,4 +1,4 @@
-from fabric import task, Connection
+from fabric import task, Connection, hide
 
 # the directory of your project on your VPS
 #code_dir = #'/home/pi/project2/ENGR195_project3_team10/'
