@@ -4,6 +4,8 @@ from fabric import task
 #code_dir = #'/home/pi/project2/ENGR195_project3_team10/'
 
 code_dir = '/home/testuser/gitprojects/ENGR195_project3_team10/'
+vision_dir = '/home/testuser/gitprojects/ENGR195_project3_team10/classifier/'
+env_dir = "/home/testuser/"
 # here, you can provide a default hostname
 # (from your .ssh/config)
 default_hosts = ["kanga2"]
@@ -40,3 +42,11 @@ def yolo(c):
 @task(hosts=default_hosts)
 def hello(c):
     c.run(["echo","hello world"])
+
+@task(hosts=default_hosts)
+def virtualenv(c):
+    c.run("cd {} && source env/bin/activate".format(env_dir))
+
+@task(hosts=default_hosts)
+def vision(c):
+    c.run("cd {} && source env/bin/activate && cd {} && python3 runvision.py".format(env_dir,vision_dir))
