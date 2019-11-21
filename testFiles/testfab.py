@@ -56,6 +56,6 @@ def vision(c):
 
 
 
-c = connection('kanga2')
+c = Connection('kanga2')
 result = c.run("echo && hello world")
 print(result.stdout.strip())
