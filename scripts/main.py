@@ -3,6 +3,7 @@ import functions as fn
 from picamera import PiCamera
 from fabric import task, Connection
 import time
+from ast import literal_eval
 #from kanga2:.pythonTest import testfn
 
 ss = crickit.seesaw
@@ -22,9 +23,9 @@ while True:
         #this runs the neural network on the laptop and returns a dictionary of the confidences
         result = fn.vision(c)
         
-        #need a function to parse it
+        #need a function to parse it (nevermind python does it for me )
         #example output: {'paper': 0.45938486, 'cardboard': 0.42542723, 'plastic': 0.06604799, 'metal': 0.036904056, 'glass': 0.012235973}
-	parsedResult = strDictParser(result)
+        parsedResult = literal_eval(result)
         
         
         print(result)

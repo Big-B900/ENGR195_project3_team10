@@ -46,9 +46,5 @@ def vision(c):
 	#print(result)
 
 
-def strDictParser(inputString):
-	output = {}
-	
-	return output
 
 
