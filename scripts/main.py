@@ -25,7 +25,7 @@ while True:
         print(result)
        
         #logic
-        #if result
+        
         
         
         fn.rotateThetrough(direction)
