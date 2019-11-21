@@ -20,9 +20,9 @@ while True:
         #make sure picture is recieved
         time.sleep(.5)
         #this runs the neural network on the laptop and returns a dictionary of the confidences
-        result = fn.vision(c)
+        result = fn.vision(c).stdout.strip()
         
-        print(result)#.stdout.strip())
+        print(result)
        
         #logic
         #if result
