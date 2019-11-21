@@ -2,7 +2,7 @@ import time
 from adafruit_crickit import crickit
 import subprocess
 from picamera import PiCamera
-
+from fabric import task, Connection
 
 def rotateThetrough(t):
 
@@ -38,7 +38,9 @@ def picToTop(camera):
 	p = subprocess.Popen(["scp",fromPath,toPath], stdout=subprocess.PIPE)
 	p.communicate()
 
-
+def vision(c):
+	result =  c.run("cd {} && source env/bin/activate && cd {} && python3 runvision.py".format(env_dir,vision_dir),hide=True)
+	#print(result)
 
 
 
