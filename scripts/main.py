@@ -14,7 +14,7 @@ c = Connection('kanga2')
 direction = 0
 
 i=0
-funFactsTime = 500
+funFactsTime = 1000
 while True:
     if not(ss.digital_read(BUTTON_1)):
         print("yuh")
