@@ -37,5 +37,6 @@ while True:
         
         fn.rotateThetrough(direction)
     i += 1
-    if(i%1000 == 0):
-            funFacts(int(i / 1000))
+    #print(i)
+    if(i%200 == 0):
+           fn.funFacts(int(i / 1000))
