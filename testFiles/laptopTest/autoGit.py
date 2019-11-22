@@ -3,10 +3,11 @@ import subprocess
 
 c = Connection('raspi')
 
-method = input("commit message: ")
+message = input("commit message: ")
+	
 
 p = subprocess.Popen(["git", "add","."], stdout=subprocess.PIPE)
-q = subprocess.Popen(["git", "commit","-m",'"{}"'.format(method)], stdout=subprocess.PIPE)
+q = subprocess.Popen(["git", "commit","-m",'"{}"'.format(message)], stdout=subprocess.PIPE)
 r = subprocess.Popen(["git", "push"], stdout=subprocess.PIPE)
 
 print(p.communicate())
