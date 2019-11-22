@@ -41,20 +41,20 @@ while True:
         #example output: {'paper': 0.45938486, 'cardboard': 0.42542723, 'plastic': 0.06604799, 'metal': 0.036904056, 'glass': 0.012235973}
         parsedResult = literal_eval(result)
         
-		paper = parsedResult['paper']
-		cardboard = parsedResult['cardboard']
-		plastic = parsedResult['plastic']
-		metal = parsedResult['metal']
-		glass = parsedResult['glass']
+        paper = parsedResult['paper']
+        cardboard = parsedResult['cardboard']
+        plastic = parsedResult['plastic']
+        metal = parsedResult['metal']
+        glass = parsedResult['glass']
 		
         
         print(result)
        
         #logic
         if paper < allThreshold and cardboard < allThreshold and plastic < allThreshold and metal < allThreshold and glass < allThreshold:
-			direction = 1
-		else:
-			direction = 0
+            direction = 1
+        else:
+            direction = 0
         
         
         fn.rotateThetrough(direction)
