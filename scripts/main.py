@@ -13,6 +13,12 @@ camera = PiCamera()
 c = Connection('kanga2')
 direction = 0
 
+paper = 0.0
+cardboard = 0.0
+plastic = 0.0
+metal = 0.0
+glass = 0.0
+
 i=0
 funFactsTime = 1000
 while True:
