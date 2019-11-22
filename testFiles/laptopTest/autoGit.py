@@ -5,7 +5,7 @@ c = Connection('raspi')
 
 p = subprocess.Popen(["git", "add","."], stdout=subprocess.PIPE)
 q = subprocess.Popen(["git", "commit","-m",'"automated git push"'], stdout=subprocess.PIPE)
-
+r = subprocess.Popen(["git", "push"], stdout=subprocess.PIPE)
 #c.local('git config --global user.email "big-b+git@wayfarer.org"')
 #c.local('git config --global user.name "Bram"')
 
@@ -14,7 +14,8 @@ q = subprocess.Popen(["git", "commit","-m",'"automated git push"'], stdout=subpr
 #c.local("git push")
 print(p.communicate())
 print(q.communicate())
-c.local("git pull")
+print(r.communicate())
+#c.local("git pull")
 
 
 
