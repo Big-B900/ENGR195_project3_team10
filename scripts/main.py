@@ -14,6 +14,7 @@ c = Connection('kanga2')
 direction = 0
 
 i=0
+funFactsTime = 200
 while True:
     if not(ss.digital_read(BUTTON_1)):
         print("yuh")
@@ -38,6 +39,6 @@ while True:
         fn.rotateThetrough(direction)
    
     #print(i)
-    if(i%200 == 0):
-           fn.funFacts(int(i / 200))
+    if(i%funFactsTime == 0):
+           fn.funFacts(int(i / funFactsTime))
     i += 1
