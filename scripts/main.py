@@ -13,6 +13,7 @@ camera = PiCamera()
 c = Connection('kanga2')
 direction = 0
 
+i=0
 while True:
     if not(ss.digital_read(BUTTON_1)):
         print("yuh")
@@ -35,3 +36,6 @@ while True:
         
         
         fn.rotateThetrough(direction)
+    i += 1
+    if(i%1000 == 0):
+            funFacts(int(i / 1000))

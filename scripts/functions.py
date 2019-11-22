@@ -45,6 +45,11 @@ def vision(c):
 	return result.stdout.strip()
 	#print(result)
 
+def funFacts(y):
+    facts = ["According to the EPA, 75% of American waste is recyclable, and 30% of it is actually recycled\n","Americans throw away about 28 billion bowls and jars every year\n","A glass container can go from a recycling bin to s tore shelf in as few as 30 days\n","The average person generates over 4 pounds of trash each day\n"]
 
+    print(facts[y%4])
+    
+    
 
 
