@@ -4,6 +4,7 @@ from picamera import PiCamera
 from fabric import task, Connection
 import time
 from ast import literal_eval
+import operator    
 #from kanga2:.pythonTest import testfn
 
 ss = crickit.seesaw
@@ -24,7 +25,7 @@ glass = 0.0
 allThreshold = .4
 
 
-
+material = 'trash'
 i=0
 funFactsTime = 1000
 while True:
@@ -40,7 +41,7 @@ while True:
         #need a function to parse it (nevermind python does it for me )
         #example output: {'paper': 0.45938486, 'cardboard': 0.42542723, 'plastic': 0.06604799, 'metal': 0.036904056, 'glass': 0.012235973}
         parsedResult = literal_eval(result)
-        
+
         paper = parsedResult['paper']
         cardboard = parsedResult['cardboard']
         plastic = parsedResult['plastic']
@@ -48,17 +49,21 @@ while True:
         glass = parsedResult['glass']
 		
         
-        print(result)
+       # print(result)
+       
+       
        
         #logic
         if paper < allThreshold and cardboard < allThreshold and plastic < allThreshold and metal < allThreshold and glass < allThreshold:
             direction = 1
+            material = 'trash'
         else:
             direction = 0
+            material =  max(parsedResult.items(), key=operator.itemgetter(1))[0]
         
         
         fn.rotateThetrough(direction)
-   
+   	fn.printResult (material)+-
     #print(i)
     if(i%funFactsTime == 1):
            fn.funFacts(int(i / funFactsTime))
