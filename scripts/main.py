@@ -60,10 +60,8 @@ while True:
         else:
             direction = 0
             material =  max(parsedResult.items(), key=operator.itemgetter(1))[0]
-        
-        
         fn.rotateThetrough(direction)
-   	fn.printResult (material)+-
+        fn.printResult (material)
     #print(i)
     if(i%funFactsTime == 1):
            fn.funFacts(int(i / funFactsTime))
