@@ -4,21 +4,22 @@ import subprocess
 from picamera import PiCamera
 from fabric import task, Connection
 
+center = 80
 def rotateThetrough(t):
 
     if t == 1:
-        crickit.servo_1.angle = 90
+        crickit.servo_1.angle = center
         time.sleep(.1)
         crickit.servo_1.angle = 0
         time.sleep(1)
-        crickit.servo_1.angle = 90
+        crickit.servo_1.angle = center
         print("your object is going to the landfill")
     else:
-        crickit.servo_1.angle = 90
+        crickit.servo_1.angle = center
         time.sleep(.1)
         crickit.servo_1.angle = 180
         time.sleep(1)
-        crickit.servo_1.angle = 90
+        crickit.servo_1.angle = center
         print("your object is being recycled")
 
 
