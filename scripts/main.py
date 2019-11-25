@@ -30,7 +30,8 @@ i=0
 funFactsTime = 1000
 while True:
     if not(ss.digital_read(BUTTON_1)):
-        print("yuh")
+    	#print("yuh")
+        print("Processing...")
         fn.picToTop(camera)
         #testfn()
         #make sure picture is recieved
