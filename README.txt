@@ -37,7 +37,8 @@ activate virtualenv:
 $source env/bin/activate
 
 run code here
-$...
+$cd ENGR195_project3_team10/scripts/
+$./run.sh
 
 deactivate virtualenv
 $deactivate
